@@ -1,0 +1,64 @@
+insert 
+i -> change to insert mode add char before cur 
+a -> change to insert mode add char after cur
+I -> change to insert mode add char at the begining of cur line
+A -> change to insert mode add char at the end of cur line
+o -> change to insert mode add char to next line
+O -> change to insert mode add char to the prev line
+
+
+delete
+x -> delete the cur char
+X -> delete the prev char
+dd -> delete cur line
+d<x> -> delete the point item, <x> can be "2w", '3e' , '4l' , '$' , '^' 
+c<x> -> cut the point item to the copyboard
+
+
+copy 
+yy -> copy cur line
+y<x> -> copy point item
+
+
+paste
+p -> paste next the cur location
+P -> paste prev the cur location
+
+combine
+
+J -> combine cur line with next line (remove the '\n' at the end of cur line)
+
+
+replace
+
+r<x> -> replace cur char to the point char 
+gu<x> -> change to lowercase
+gu<x> -> change to uppercase
+g~<x> -> toggle the lettercase
+':s/search/replace'  -> change the first occurence of search to replace
+':%s/search/replace' -> change the first occurence of search to replace to every line (% represent for :1,$ meaning from first line to the last line)
+
+undo and redo
+u -> undo
+ctrl-r -> redo
+
+modify file
+':w' -> save
+':wa' -> save all files
+':q' -> quit
+':saveas <filename>' -> rename the file
+':w <filename>' -> like 'cp a b' in linux shell
+
+
+.  -> repeat prev cmd
+
+
+>> -> indent
+<< -< remove indent
+
+
+
+== auto format cur line
+<N>==  auto format next N lines
+=<N>j auto format next N lines
+=<N>k auto format next N lines

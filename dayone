@@ -1,0 +1,48 @@
+normal mode functions:
+h-> left
+l-> right
+j-> down
+k-> up
+
+ctrl+u -> scroll up half page
+ctrl+d -> scroll down half page
+ctrl+f -> scroll down one page
+ctrl+b -> scroll up one page
+6(G/gg) -> point to line 6
+
+
+
+gg-> start of the file
+G -> end of the file
+0 -> the first column of the current line
+^ -> the first non-space character of the current line
+$ -> the last character of the current line
+
+* search the cur character from cur to the end of the file
+# search the cur character from cur to the start of the file
+n next
+N prev
+
+
+f<char> find the <char> in current line from cur to the end
+t<char> find the <char> in the current line and point to the prev char from cur to the end
+F<char> find the <char> in current line from cur to the start
+T<char> find the <char> in the cur line and point to the next char from cur to the start
+; next
+, prev
+
+
+/<pattern> -> find the regex pattern from cur to the end of the file
+?<pattern> -> find the regex pattern from cur to the start of the file
+
+
+gf -> open file using cur path
+:Ex -> open file tree (in file tree '-' represent the parent directory)
+:e <filename>  -> open or create file
+
+
+:(ls/buffers) -> list the open sessions by vim
+:bn ->  open the next buffer
+:bp ->  open the previous buffer
+:b<number> -> open the specific buffer
+:bd<number> -> delete the specific buffer
